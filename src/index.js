@@ -3,7 +3,7 @@ const typeDefs = require('./typeDefs');
 const resolvers = require('./resolvers');
 const AccountAPI = require('./dataSources/account_api');
 const AuthAPI = require('./dataSources/auth_api');
-const StoreAPI = require('dataSources/store_api');
+const BiblioAPI =require('./dataSources/biblio_api');
 const authentication = require('./utils/authentication');
 
 const server = new ApolloServer({
@@ -13,7 +13,7 @@ const server = new ApolloServer({
     dataSources: () => ({
         accountAPI: new AccountAPI(),
         authAPI: new AuthAPI(),
-        storeAPI:new StoreAPI(),
+        biblioAPI: new BiblioAPI(),
     }),
     introspection: true,
     playground: true
