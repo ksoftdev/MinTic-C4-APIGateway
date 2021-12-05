@@ -12,7 +12,7 @@ const bibliotecaTypeDefs = gql `
         book_id: Int!
         book_title: String!
         ISBN: String!
-        image: String!
+        image: String
         publication_year: Int!
         language: String!
         sale_price: Float!
@@ -34,7 +34,7 @@ const bibliotecaTypeDefs = gql `
     input BookInput {
         book_title: String!
         ISBN: String!
-        image: String!
+        image: String
         publication_year: Int!
         language: String!
         sale_price: Float!
@@ -51,6 +51,7 @@ const bibliotecaTypeDefs = gql `
         createBook(book: BookInput!): Tokens!
         createAuthor(author: AuthorInput!): Tokens!
         createCategory(category_name: CategoryInput!): Tokens!
+        refreshToken(refresh: String!): Access!
     }
     
     extend type Query {
