@@ -35,7 +35,7 @@ const bibliotecaResolver = {
             
             //if (username == usernameToken)
             if (book!=null)
-                return dataSources.biblioAPI.createBook(book)
+                return dataSources.biblioAPI.createbook(book)
             else
                 return null
     
