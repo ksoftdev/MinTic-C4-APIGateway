@@ -32,7 +32,6 @@ const bibliotecaResolver = {
     Mutation: {
         createBook: async(_, { book }, { dataSources, userIdToken }) => {
             usernameToken = (await dataSources.authAPI.getUser(userIdToken)).username
-            
             //if (username == usernameToken)
             if (book!=null)
                 return dataSources.biblioAPI.createbook(book)

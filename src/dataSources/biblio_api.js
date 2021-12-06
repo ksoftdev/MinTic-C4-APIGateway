@@ -18,7 +18,7 @@ class BiblioAPI extends RESTDataSource {
     }
     async createAuthor(author) {
         author = new Object(JSON.parse(JSON.stringify(author)));
-        return await this.post('/api/authors/create', author);
+        return await this.post('/api/authors/create/', author);
     }
     async Author(Author_id) {
         return await this.get(`/api/authors/${Author_id}`);
@@ -26,7 +26,7 @@ class BiblioAPI extends RESTDataSource {
 
     async createCategory(category) {
         category = new Object(JSON.parse(JSON.stringify(category)));
-        return await this.post('/api/categories/create', category);
+        return await this.post('/api/categories/create/', category);
     }
     
     async Category() {

@@ -33,7 +33,7 @@ const bibliotecaTypeDefs = gql `
 
     input BookInput {
         book_title: String!
-        ISBN: String!
+        isbn: String!
         image: String
         publication_year: Int!
         language: String!
@@ -48,10 +48,9 @@ const bibliotecaTypeDefs = gql `
     }
     
     extend type Mutation {
-        createBook(book: BookInput!): Tokens!
-        createAuthor(author: AuthorInput!): Tokens!
-        createCategory(category_name: CategoryInput!): Tokens!
-        refreshToken(refresh: String!): Access!
+        createBook(book: BookInput!): BookDetails!
+        createAuthor(author: AuthorInput!): Author!
+        createCategory(category_name: CategoryInput!): CategoryDetails!
     }
     
     extend type Query {
