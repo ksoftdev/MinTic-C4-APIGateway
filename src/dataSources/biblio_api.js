@@ -10,7 +10,7 @@ class BiblioAPI extends RESTDataSource {
         return await this.post('/api/books/create/', book);
     }
     async querybook(book_id) {
-        return await this.get('/api/books/${book_id}');
+        return await this.get(`/api/books/${book_id}`);
     }
 
     async querybooks() {
