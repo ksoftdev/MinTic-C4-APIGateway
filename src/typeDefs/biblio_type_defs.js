@@ -12,7 +12,7 @@ const bibliotecaTypeDefs = gql `
         book_id: Int!
         book_title: String!
         ISBN: String!
-        image: String!
+        image: String
         publication_year: Int!
         language: String!
         sale_price: Float!
@@ -33,8 +33,8 @@ const bibliotecaTypeDefs = gql `
 
     input BookInput {
         book_title: String!
-        ISBN: String!
-        image: String!
+        isbn: String!
+        image: String
         publication_year: Int!
         language: String!
         sale_price: Float!
@@ -48,9 +48,9 @@ const bibliotecaTypeDefs = gql `
     }
     
     extend type Mutation {
-        createBook(book: BookInput!): Tokens!
-        createAuthor(author: AuthorInput!): Tokens!
-        createCategory(category_name: CategoryInput!): Tokens!
+        createBook(book: BookInput!): BookDetails!
+        createAuthor(author: AuthorInput!): Author!
+        createCategory(category_name: CategoryInput!): CategoryDetails!
     }
     
     extend type Query {
@@ -59,10 +59,7 @@ const bibliotecaTypeDefs = gql `
         authorDetails(author_id: Int!): Author!
         autores: [Author]!
     }
-
-
 `;
-
 /*
         
         authorsDetails(): [author]
