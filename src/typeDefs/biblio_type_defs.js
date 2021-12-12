@@ -58,6 +58,7 @@ const bibliotecaTypeDefs = gql `
         categoryDetails: [CategoryDetails]!
         authorDetails(author_id: Int!): Author!
         autores: [Author]!
+        libros: [BookDetails]!
     }
 `;
 /*

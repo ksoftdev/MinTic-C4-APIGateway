@@ -37,6 +37,15 @@ const bibliotecaResolver = {
             //    return null
     
         },
+        libros: async(_,{} ,{ dataSources, userIdToken }) => {
+            usernameToken = (await dataSources.authAPI.getUser(userIdToken)).username
+
+            //if (username == usernameToken)
+                return dataSources.biblioAPI.querybooks()
+           // else
+            //    return null
+    
+        },
         
 
     },
