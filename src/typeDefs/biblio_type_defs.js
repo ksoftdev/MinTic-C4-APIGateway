@@ -56,9 +56,9 @@ const bibliotecaTypeDefs = gql `
     extend type Query {
         bookDetails(book_id: Int!): BookDetails!
         categoryDetails: [CategoryDetails]!
-        authorDetails(author_id: Int!): Author!
         autores: [Author]!
         libros: [BookDetails]!
+        authorDetails(author_id: Int!): Author!
     }
 `;
 /*

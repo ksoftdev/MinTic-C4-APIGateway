@@ -28,24 +28,16 @@ const bibliotecaResolver = {
                 return null
     
         },
-        autores: async(_,{} ,{ dataSources, userIdToken }) => {
-            usernameToken = (await dataSources.authAPI.getUser(userIdToken)).username
-
-            //if (username == usernameToken)
-                return dataSources.biblioAPI.queryAuthor()
-           // else
-            //    return null
-    
-        },
         libros: async(_,{} ,{ dataSources, userIdToken }) => {
             usernameToken = (await dataSources.authAPI.getUser(userIdToken)).username
-
-            //if (username == usernameToken)
                 return dataSources.biblioAPI.querybooks()
-           // else
-            //    return null
     
         },
+        autores: async(_,{} ,{ dataSources, userIdToken }) => {
+            usernameToken = (await dataSources.authAPI.getUser(userIdToken)).username
+                return dataSources.biblioAPI.queryAuthor()
+        },
+       
         
 
     },

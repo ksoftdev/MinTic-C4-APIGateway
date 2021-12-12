@@ -25,7 +25,7 @@ class BiblioAPI extends RESTDataSource {
     }
 
     async queryAuthor() {
-        return await this.get(`/api/authors/`);
+        return await this.get(`/api/authors`);
     }
 
     async createCategory(category) {
