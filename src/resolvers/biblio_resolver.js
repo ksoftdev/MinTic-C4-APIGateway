@@ -28,6 +28,15 @@ const bibliotecaResolver = {
                 return null
     
         },
+        getAuthor:async(_, {}, { dataSources, userIdToken }) => {
+            usernameToken = (await dataSources.authAPI.getUser(userIdToken)).username
+
+            //if (username == usernameToken)
+            //if(author_id!=null)
+                return dataSources.biblioAPI.queryAuthor()
+            //else
+              //  return null
+        },
     },
     Mutation: {
         createBook: async(_, { book }, { dataSources, userIdToken }) => {

@@ -57,6 +57,7 @@ const bibliotecaTypeDefs = gql `
         bookDetails(book_id: Int!): BookDetails!
         categoryDetails: [CategoryDetails]!
         authorDetails(author_id: Int!): Author!
+        getAuthor: [Author]!
     }
 `;
 /*
